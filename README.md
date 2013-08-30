@@ -4,7 +4,7 @@ KnightTravails
 Solving KnightTravails Problem
 
 The following code will solve the famous KnightTravails problem. The problem is as follows:
-Given a standard 8x8 chess board, find the minimum number of moves that a Knight chess piece needs to take from two arbitrary squares.
+Given a standard 8x8 chess board, find the minimum number of moves that a Knight chess piece needs to take between two arbitrarily chosen squares.
 
 The solution that I coded uses the Breadth First Search Algorithm. (BFS)
 
