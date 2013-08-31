@@ -1,12 +1,14 @@
 package domain;
 
 /**
- * Created with IntelliJ IDEA.
- * User: Rommel
- * Date: 30/08/13
- * Time: 10:18 AM
- * To change this template use File | Settings | File Templates.
+ * Interface Position
+ * <p/>
+ * Created by IntelliJ IDEA.
+ *
+ * @author Rommel Vergara (308149777)
+ * @version 1.0
+ * @since 30/08/13 10:18 AM
  */
-interface Position {
-
+interface Position
+{
 }
