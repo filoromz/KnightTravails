@@ -1,4 +1,6 @@
-package domain;
+package domain.boards;
+
+import domain.pieces.BoardGamePiece;
 
 /**
  * BoardLayout interface which will have common methods of different board games which can be used
@@ -12,5 +14,5 @@ package domain;
  */
 public interface BoardLayout
 {
-	public boolean isValidPosition( BoardGamePiece node );
+	public boolean isValidPosition( final BoardGamePiece node );
 }

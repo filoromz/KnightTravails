@@ -1,4 +1,7 @@
-package domain;
+package domain.pieces.chess;
+
+import domain.pieces.BoardGamePiece;
+import domain.positions.ChessPosition;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,12 +17,12 @@ import java.util.List;
  */
 public class PawnPiece extends ChessPiece
 {
-	public PawnPiece( boolean isWhite, ChessPosition position, ChessPiece previous )
+	public PawnPiece( final boolean isWhite, final ChessPosition position, final ChessPiece previous )
 	{
 		super( isWhite, position, previous );
 	}
 
-	public PawnPiece( boolean isWhite, String position )
+	public PawnPiece( final boolean isWhite, final String position )
 	{
 		super( isWhite, new ChessPosition( (int) position.charAt( 0 ), Integer.parseInt( String.valueOf( position.charAt( 1 ) ) ) ), null );
 	}

@@ -1,4 +1,4 @@
-package domain;
+package domain.positions;
 
 /**
  * A ChessPosition concrete class which represents the co-ordinates of a chess piece.
@@ -11,10 +11,10 @@ package domain;
  */
 public class ChessPosition implements Position
 {
-	int m_x;
-	int m_y;
+	private int m_x;
+	private int m_y;
 
-	public ChessPosition( int a, int b )
+	public ChessPosition( final int a, final int b )
 	{
 		m_x = a;
 		m_y = b;

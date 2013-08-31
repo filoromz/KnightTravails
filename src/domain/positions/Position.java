@@ -1,4 +1,4 @@
-package domain;
+package domain.positions;
 
 /**
  * Interface Position
@@ -9,6 +9,6 @@ package domain;
  * @version 1.0
  * @since 30/08/13 10:18 AM
  */
-interface Position
+public interface Position
 {
 }

@@ -1,4 +1,8 @@
-package domain;
+package domain.boards;
+
+import domain.pieces.BoardGamePiece;
+import domain.pieces.chess.ChessPiece;
+import domain.positions.ChessPosition;
 
 /**
  * Concrete class implementation of a ChessBoard. Currently only stores the implementation
@@ -19,11 +23,11 @@ public class ChessBoard implements BoardLayout
 	public static final int MIN_COL = ALPHABET_START_INDEX;
 	public static final int MAX_COL = ALPHABET_START_INDEX + MAX_ROW;
 
-	public boolean isValidPosition( BoardGamePiece piece )
+	public boolean isValidPosition( final BoardGamePiece piece )
 	{
 		if( piece instanceof ChessPiece )
 		{
-			ChessPosition pos = (ChessPosition) piece.getCoordinates();
+			ChessPosition pos = (ChessPosition) piece.getPosition();
 			return pos.getX()>=MIN_COL && pos.getX()<=MAX_COL &&
 					pos.getY()>=MIN_ROW && pos.getY()<=MAX_ROW;
 		}

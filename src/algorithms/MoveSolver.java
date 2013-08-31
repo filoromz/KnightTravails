@@ -1,13 +1,13 @@
 package algorithms;
 
-import domain.BoardGamePiece;
-import domain.BoardLayout;
+import domain.boards.BoardLayout;
+import domain.pieces.BoardGamePiece;
 
 import java.util.*;
 import java.util.concurrent.LinkedBlockingQueue;
 
 /**
- * Abstract class MoveSolver. This class will contain any common classes that need to be implemented
+ * Abstract class MoveSolver. This class will contain any common methods that need to be implemented
  * by subclasses to solve a particular move problem.
  * <p/>
  * Created by IntelliJ IDEA.
@@ -18,22 +18,19 @@ import java.util.concurrent.LinkedBlockingQueue;
  */
 public abstract class MoveSolver
 {
-	BoardGamePiece m_startPiece;
-	BoardGamePiece m_endPiece;
-	BoardLayout m_board;
-	Queue<BoardGamePiece> m_piecesToCheck = new LinkedBlockingQueue<BoardGamePiece>();
-	Set<BoardGamePiece> m_seenPieces = new HashSet<BoardGamePiece>();
-	List<BoardGamePiece> m_solution = new ArrayList<BoardGamePiece>();
+	final BoardGamePiece m_startPiece;
+	final BoardGamePiece m_endPiece;
+	final BoardLayout m_board;
+	final Queue<BoardGamePiece> m_piecesToCheck = new LinkedBlockingQueue<BoardGamePiece>();
+	final Set<BoardGamePiece> m_seenPieces = new HashSet<BoardGamePiece>();
+	final List<BoardGamePiece> m_solution = new ArrayList<BoardGamePiece>();
 
-	public MoveSolver( BoardGamePiece startPiece, BoardGamePiece endPiece, BoardLayout board )
+	public MoveSolver( final BoardGamePiece startPiece, final BoardGamePiece endPiece, final BoardLayout board )
 	{
 		m_startPiece = startPiece;
 		m_endPiece = endPiece;
 		m_board = board;
 	}
 
-	public abstract void solve();
-
-	public abstract void printSolution();
-
+	public abstract List<BoardGamePiece> solve();
 }

@@ -1,4 +1,7 @@
-package domain;
+package domain.pieces;
+
+
+import domain.positions.Position;
 
 import java.util.List;
 
@@ -16,7 +19,7 @@ public interface BoardGamePiece
 {
 	public List<BoardGamePiece> getNeighbours();
 
-	public Position getCoordinates();
+	public Position getPosition();
 
 	public BoardGamePiece getPreviousPiece();
 }

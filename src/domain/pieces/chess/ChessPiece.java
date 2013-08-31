@@ -1,4 +1,9 @@
-package domain;
+package domain.pieces.chess;
+
+import domain.pieces.BoardGamePiece;
+import domain.positions.ChessPosition;
+import domain.positions.Position;
+
 
 /**
  * Abstract class ChessPiece which will store common features related to a chess piece.
@@ -11,18 +16,18 @@ package domain;
  */
 public abstract class ChessPiece implements BoardGamePiece
 {
-	boolean m_isWhite;
-	ChessPosition m_position;
-	ChessPiece m_prevPiece;
+	final boolean m_isWhite;
+	final ChessPosition m_position;
+	final ChessPiece m_prevPiece;
 
-	public ChessPiece( boolean isWhite, ChessPosition position, ChessPiece prev )
+	public ChessPiece( final boolean isWhite, final ChessPosition position, final ChessPiece prev )
 	{
 		m_isWhite = isWhite;
 		m_position = position;
 		m_prevPiece = prev;
 	}
 
-	public Position getCoordinates()
+	public Position getPosition()
 	{
 		return m_position;
 	}
@@ -32,12 +37,11 @@ public abstract class ChessPiece implements BoardGamePiece
 		return m_prevPiece;
 	}
 
-
 	public boolean equals( Object obj )
 	{
 		if( obj instanceof ChessPiece )
 		{
-			ChessPosition position = (ChessPosition) ( (ChessPiece) obj ).getCoordinates();
+			ChessPosition position = (ChessPosition) ( (ChessPiece) obj ).getPosition();
 			return m_position.getX()==position.getX() && m_position.getY()==position.getY();
 		}
 		return false;
