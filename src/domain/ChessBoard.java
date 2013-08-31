@@ -12,7 +12,7 @@ package domain;
  */
 public class ChessBoard implements BoardLayout
 {
-	public static final int ALPHABET_START_INDEX = 96; //96 == 'a'
+	public static final int ALPHABET_START_INDEX = 97; //97 == 'a'
 
 	public static final int MIN_ROW = 1;
 	public static final int MAX_ROW = 8;
