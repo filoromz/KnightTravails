@@ -15,10 +15,12 @@ import java.util.List;
  */
 public abstract class Display
 {
-	List<BoardGamePiece> m_solution;
+	final List<BoardGamePiece> m_solution;
+	final String[] m_args;
 
-	public Display( final List<BoardGamePiece> solution )
+	public Display( final String[] args, final List<BoardGamePiece> solution )
 	{
+		m_args = args;
 		m_solution = solution;
 	}
 

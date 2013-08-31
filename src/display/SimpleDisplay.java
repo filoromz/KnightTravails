@@ -16,13 +16,15 @@ import java.util.List;
  */
 public class SimpleDisplay extends Display
 {
-	public SimpleDisplay( final List<BoardGamePiece> solution )
+	public SimpleDisplay( final String[] args, final List<BoardGamePiece> solution )
 	{
-		super( solution );
+		super( args, solution );
 	}
 
 	public void displaySolution()
 	{
+		System.out.println( "Starting Position: " + m_args[0].toUpperCase() + " Ending Position: " + m_args[1].toUpperCase() );
+
 		System.out.print( "Solution: " );
 		if( m_solution.isEmpty() )
 		{

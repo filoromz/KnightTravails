@@ -30,12 +30,11 @@ public class Main
 		BoardLayout board = new ChessBoard();                                   //create a standard 8x8 chess board
 		MoveSolver solver = new BFSMoveSolver( startPiece, endPiece, board );   //create a solver which will solve using the BFS algorithm.
 
-		System.out.println( "Starting Position: " + args[0].toUpperCase() + " Ending Position: " + args[1].toUpperCase() );
-
+		//Run the solver to find a solution to the KnightsTravails problem!
 		List<BoardGamePiece> solution = solver.solve();
 
 		//How should we display the solution?
-		Display display = new SimpleDisplay( solution );
+		Display display = new SimpleDisplay( args, solution );
 		display.displaySolution();
 	}
 }
